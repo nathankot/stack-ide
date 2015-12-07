@@ -197,11 +197,7 @@ Can be either:
   "Set the initial command callback. The `stack ide` command will
 reload targets on start-up, so that's the default command we'll
 start with."
-  (setq stack-mode-current-command
-        (list :json nil
-              :data nil
-              :cont 'stack-mode-loading-callback
-              :label nil))
+  (setq stack-mode-current-command nil)
   (setq stack-mode-queue (stack-fifo-make))
   (stack-mode-log "Set initial command."))
 
